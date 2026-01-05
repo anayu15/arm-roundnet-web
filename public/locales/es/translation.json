@@ -1,0 +1,154 @@
+{
+  "common": {
+    "welcome": "Bienvenido",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "close": "Cerrar"
+  },
+  "nav": {
+    "home": "Inicio",
+    "events": "Eventos",
+    "ranking": "Ranking",
+    "trainings": "Entrenamientos",
+    "orders": "Pedidos",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "profile": "Perfil",
+    "admin": "Administración"
+  },
+  "auth": {
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "name": "Nombre",
+    "lastName": "Apellidos",
+    "phone": "Teléfono",
+    "level": "Nivel de juego",
+    "gender": "Género",
+    "signIn": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "signOut": "Cerrar sesión",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resetPassword": "Restablecer contraseña",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "emailRequired": "El correo electrónico es requerido",
+    "passwordRequired": "La contraseña es requerida",
+    "passwordMin": "La contraseña debe tener al menos 6 caracteres",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "invalidEmail": "Correo electrónico inválido"
+  },
+  "levels": {
+    "principiante": "Principiante",
+    "intermedio": "Intermedio",
+    "avanzado": "Avanzado",
+    "profesional": "Profesional"
+  },
+  "gender": {
+    "masculino": "Masculino",
+    "femenino": "Femenino",
+    "otro": "Otro"
+  },
+  "events": {
+    "title": "Eventos",
+    "upcoming": "Próximos eventos",
+    "past": "Eventos pasados",
+    "myEvents": "Mis eventos",
+    "createEvent": "Crear evento",
+    "editEvent": "Editar evento",
+    "deleteEvent": "Eliminar evento",
+    "registerToEvent": "Inscribirse",
+    "cancelRegistration": "Cancelar inscripción",
+    "eventDetails": "Detalles del evento",
+    "date": "Fecha",
+    "time": "Hora",
+    "location": "Ubicación",
+    "price": "Precio",
+    "free": "Gratis",
+    "spotsAvailable": "Plazas disponibles",
+    "spotsLeft": "{{count}} plazas disponibles",
+    "noSpotsLeft": "No quedan plazas",
+    "registered": "Inscrito",
+    "paymentPending": "Pago pendiente",
+    "paymentCompleted": "Pago completado",
+    "type": {
+      "torneo": "Torneo",
+      "entrenamiento": "Entrenamiento",
+      "social": "Quedada Social"
+    },
+    "status": {
+      "upcoming": "Próximo",
+      "ongoing": "En curso",
+      "completed": "Finalizado",
+      "cancelled": "Cancelado"
+    }
+  },
+  "ranking": {
+    "title": "Ranking",
+    "player": "Jugador",
+    "team": "Equipo",
+    "points": "Puntos",
+    "tournaments": "Torneos",
+    "position": "Posición",
+    "category": "Categoría",
+    "season": "Temporada",
+    "categories": {
+      "mixto": "Mixto",
+      "masculino": "Masculino",
+      "femenino": "Femenino",
+      "open": "Open"
+    }
+  },
+  "trainings": {
+    "title": "Entrenamientos",
+    "schedule": "Horario",
+    "days": "Días",
+    "time": "Hora",
+    "location": "Ubicación",
+    "howToGet": "Cómo llegar",
+    "subscribe": "Suscribirse",
+    "monthlyFee": "Cuota mensual",
+    "contact": "Contacto"
+  },
+  "profile": {
+    "title": "Mi perfil",
+    "personalInfo": "Información personal",
+    "myEvents": "Mis eventos",
+    "myTeams": "Mis equipos",
+    "editProfile": "Editar perfil",
+    "changePassword": "Cambiar contraseña",
+    "memberSince": "Miembro desde"
+  },
+  "admin": {
+    "title": "Panel de administración",
+    "dashboard": "Dashboard",
+    "events": "Gestionar eventos",
+    "registrations": "Inscripciones",
+    "users": "Usuarios",
+    "stats": "Estadísticas",
+    "totalEvents": "Total de eventos",
+    "totalUsers": "Total de usuarios",
+    "totalRevenue": "Ingresos totales"
+  },
+  "footer": {
+    "followUs": "Síguenos",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados"
+  }
+}

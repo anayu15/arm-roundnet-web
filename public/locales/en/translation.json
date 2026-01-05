@@ -1,0 +1,154 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "close": "Close"
+  },
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "ranking": "Ranking",
+    "trainings": "Trainings",
+    "orders": "Orders",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "profile": "Profile",
+    "admin": "Admin"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "First name",
+    "lastName": "Last name",
+    "phone": "Phone",
+    "level": "Skill level",
+    "gender": "Gender",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signOut": "Sign out",
+    "forgotPassword": "Forgot your password?",
+    "resetPassword": "Reset password",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordMin": "Password must be at least 6 characters",
+    "passwordMismatch": "Passwords do not match",
+    "invalidEmail": "Invalid email"
+  },
+  "levels": {
+    "principiante": "Beginner",
+    "intermedio": "Intermediate",
+    "avanzado": "Advanced",
+    "profesional": "Professional"
+  },
+  "gender": {
+    "masculino": "Male",
+    "femenino": "Female",
+    "otro": "Other"
+  },
+  "events": {
+    "title": "Events",
+    "upcoming": "Upcoming events",
+    "past": "Past events",
+    "myEvents": "My events",
+    "createEvent": "Create event",
+    "editEvent": "Edit event",
+    "deleteEvent": "Delete event",
+    "registerToEvent": "Register",
+    "cancelRegistration": "Cancel registration",
+    "eventDetails": "Event details",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "price": "Price",
+    "free": "Free",
+    "spotsAvailable": "Spots available",
+    "spotsLeft": "{{count}} spots left",
+    "noSpotsLeft": "No spots left",
+    "registered": "Registered",
+    "paymentPending": "Payment pending",
+    "paymentCompleted": "Payment completed",
+    "type": {
+      "torneo": "Tournament",
+      "entrenamiento": "Training",
+      "social": "Social Meetup"
+    },
+    "status": {
+      "upcoming": "Upcoming",
+      "ongoing": "Ongoing",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    }
+  },
+  "ranking": {
+    "title": "Ranking",
+    "player": "Player",
+    "team": "Team",
+    "points": "Points",
+    "tournaments": "Tournaments",
+    "position": "Position",
+    "category": "Category",
+    "season": "Season",
+    "categories": {
+      "mixto": "Mixed",
+      "masculino": "Men's",
+      "femenino": "Women's",
+      "open": "Open"
+    }
+  },
+  "trainings": {
+    "title": "Trainings",
+    "schedule": "Schedule",
+    "days": "Days",
+    "time": "Time",
+    "location": "Location",
+    "howToGet": "How to get there",
+    "subscribe": "Subscribe",
+    "monthlyFee": "Monthly fee",
+    "contact": "Contact"
+  },
+  "profile": {
+    "title": "My profile",
+    "personalInfo": "Personal information",
+    "myEvents": "My events",
+    "myTeams": "My teams",
+    "editProfile": "Edit profile",
+    "changePassword": "Change password",
+    "memberSince": "Member since"
+  },
+  "admin": {
+    "title": "Admin panel",
+    "dashboard": "Dashboard",
+    "events": "Manage events",
+    "registrations": "Registrations",
+    "users": "Users",
+    "stats": "Statistics",
+    "totalEvents": "Total events",
+    "totalUsers": "Total users",
+    "totalRevenue": "Total revenue"
+  },
+  "footer": {
+    "followUs": "Follow us",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  }
+}
