@@ -52,14 +52,19 @@ export const Header = () => {
       )
     }
 
-    const initials = `${profile.name[0]}${profile.apellidos[0]}`.toUpperCase()
+    const initials = profile.nombre_completo
+      .split(' ')
+      .map(n => n[0])
+      .slice(0, 2)
+      .join('')
+      .toUpperCase()
 
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-10 w-10 rounded-full">
             <Avatar>
-              <AvatarImage src={profile.foto_perfil_url || undefined} alt={profile.name} />
+              <AvatarImage src={profile.foto_perfil_url || undefined} alt={profile.nombre_completo} />
               <AvatarFallback>{initials}</AvatarFallback>
             </Avatar>
           </Button>
@@ -67,12 +72,12 @@ export const Header = () => {
         <DropdownMenuContent align="end" className="w-56">
           <div className="flex items-center gap-2 p-2">
             <Avatar>
-              <AvatarImage src={profile.foto_perfil_url || undefined} alt={profile.name} />
+              <AvatarImage src={profile.foto_perfil_url || undefined} alt={profile.nombre_completo} />
               <AvatarFallback>{initials}</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
               <p className="text-sm font-medium">
-                {profile.name} {profile.apellidos}
+                {profile.nombre_completo}
               </p>
               <p className="text-xs text-muted-foreground">{profile.email}</p>
             </div>

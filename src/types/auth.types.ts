@@ -10,9 +10,7 @@ export interface User extends SupabaseUser {
 export interface SignUpData {
   email: string
   password: string
-  name: string
-  apellidos: string
-  nivel_juego: 'principiante' | 'intermedio' | 'avanzado' | 'profesional'
+  nombre_completo: string
   genero: 'masculino' | 'femenino' | 'otro'
   telefono?: string
 }
@@ -23,10 +21,8 @@ export interface SignInData {
 }
 
 export interface UpdateProfileData {
-  name?: string
-  apellidos?: string
+  nombre_completo?: string
   telefono?: string
-  nivel_juego?: 'principiante' | 'intermedio' | 'avanzado' | 'profesional'
   genero?: 'masculino' | 'femenino' | 'otro'
   foto_perfil_url?: string
 }

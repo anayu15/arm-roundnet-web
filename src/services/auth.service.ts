@@ -7,36 +7,22 @@ export const authService = {
    */
   async signUp(data: SignUpData) {
     try {
-      // 1. Create auth user
+      // Create auth user with metadata
+      // The database trigger will automatically create the profile in public.users
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: data.email,
         password: data.password,
+        options: {
+          data: {
+            nombre_completo: data.nombre_completo,
+            genero: data.genero,
+            telefono: data.telefono || null,
+          },
+        },
       })
 
       if (authError) throw authError
       if (!authData.user) throw new Error('No user returned from sign up')
-
-      // 2. Create user profile in public.users table
-      const { error: profileError } = await supabase
-        .from('users')
-        .insert({
-          id: authData.user.id,
-          email: data.email,
-          name: data.name,
-          apellidos: data.apellidos,
-          nivel_juego: data.nivel_juego,
-          genero: data.genero,
-          telefono: data.telefono || null,
-          rol: 'user',
-        })
-
-      if (profileError) {
-        // If profile creation fails, try to delete the auth user
-        await supabase.auth.admin.deleteUser(authData.user.id).catch(() => {
-          // Ignore error if we can't delete the auth user
-        })
-        throw profileError
-      }
 
       return { user: authData.user, error: null }
     } catch (error) {

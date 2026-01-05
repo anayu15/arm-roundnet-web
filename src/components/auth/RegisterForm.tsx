@@ -24,17 +24,15 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { authService } from '@/services/auth.service'
-import { PLAYER_LEVELS, GENDER_OPTIONS } from '@/lib/constants'
+import { GENDER_OPTIONS } from '@/lib/constants'
 
 const registerSchema = z
   .object({
     email: z.string().email('Email inválido'),
     password: z.string().min(6, 'La contraseña debe tener al menos 6 caracteres'),
     confirmPassword: z.string(),
-    name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
-    apellidos: z.string().min(2, 'Los apellidos deben tener al menos 2 caracteres'),
+    nombre_completo: z.string().min(3, 'El nombre completo debe tener al menos 3 caracteres'),
     telefono: z.string().optional(),
-    nivel_juego: z.enum(['principiante', 'intermedio', 'avanzado', 'profesional']),
     genero: z.enum(['masculino', 'femenino', 'otro']),
   })
   .refine((data) => data.password === data.confirmPassword, {
@@ -55,10 +53,8 @@ export const RegisterForm = () => {
       email: '',
       password: '',
       confirmPassword: '',
-      name: '',
-      apellidos: '',
+      nombre_completo: '',
       telefono: '',
-      nivel_juego: 'principiante',
       genero: 'masculino',
     },
   })
@@ -69,10 +65,8 @@ export const RegisterForm = () => {
       const { error } = await authService.signUp({
         email: values.email,
         password: values.password,
-        name: values.name,
-        apellidos: values.apellidos,
+        nombre_completo: values.nombre_completo,
         telefono: values.telefono,
-        nivel_juego: values.nivel_juego,
         genero: values.genero,
       })
 
@@ -169,45 +163,24 @@ export const RegisterForm = () => {
             )}
           />
 
-          {/* Name */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('auth.name')}</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Juan"
-                      disabled={isLoading}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Last Name */}
-            <FormField
-              control={form.control}
-              name="apellidos"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('auth.lastName')}</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="García"
-                      disabled={isLoading}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
+          {/* Nombre Completo */}
+          <FormField
+            control={form.control}
+            name="nombre_completo"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Nombre completo</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Juan García López"
+                    disabled={isLoading}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           {/* Phone (optional) */}
           <FormField
@@ -255,43 +228,6 @@ export const RegisterForm = () => {
                     </SelectItem>
                     <SelectItem value={GENDER_OPTIONS.OTRO}>
                       {t('gender.otro')}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Nivel de juego */}
-          <FormField
-            control={form.control}
-            name="nivel_juego"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('auth.level')}</FormLabel>
-                <Select
-                  disabled={isLoading}
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Selecciona tu nivel" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value={PLAYER_LEVELS.PRINCIPIANTE}>
-                      {t('levels.principiante')}
-                    </SelectItem>
-                    <SelectItem value={PLAYER_LEVELS.INTERMEDIO}>
-                      {t('levels.intermedio')}
-                    </SelectItem>
-                    <SelectItem value={PLAYER_LEVELS.AVANZADO}>
-                      {t('levels.avanzado')}
-                    </SelectItem>
-                    <SelectItem value={PLAYER_LEVELS.PROFESIONAL}>
-                      {t('levels.profesional')}
                     </SelectItem>
                   </SelectContent>
                 </Select>
