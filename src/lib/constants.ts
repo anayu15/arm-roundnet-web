@@ -113,10 +113,13 @@ export const TRAINING_INFO = {
   },
 }
 
+// Contact
+export const CONTACT_EMAIL = 'info@roundnetmadrid.com'
+
 // Social media
 export const SOCIAL_LINKS = {
   instagram: 'https://www.instagram.com/roundnet_madrid',
-  email: 'info@roundnetmadrid.com',
+  email: CONTACT_EMAIL,
 }
 
 // Current season
